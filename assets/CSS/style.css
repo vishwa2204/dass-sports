@@ -233,6 +233,10 @@ header {
 
 }
 
+.header-content .reg{
+    color: var(--white);
+    font-size: 25px ;
+}
 
 .header-content p {
     color: var(--white);

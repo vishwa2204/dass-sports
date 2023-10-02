@@ -672,7 +672,7 @@ header {
     bottom: 0;
     border-top-right-radius: 30px;
     /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.522);
+    background: #283c8eca;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -698,7 +698,8 @@ header {
 }
 
 .whyChooseUs-content p span{
-   color: var(--color3);
+   color: var(--white);
+   -webkit-text-stroke: 1px var(--red);
     font-weight: 800;
     font-size: 20px ;
 }

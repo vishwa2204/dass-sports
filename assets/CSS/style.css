@@ -95,6 +95,7 @@ header {
     margin-bottom: 5%;
 }
 
+
 .navbar .navbar-nav .active {
     color: var(--white) !important;
     font-weight: 900;
@@ -233,9 +234,9 @@ header {
 
 }
 
-.header-content .reg{
+.header-content .reg {
     color: var(--white);
-    font-size: 25px ;
+    font-size: 25px;
 }
 
 .header-content p {
@@ -594,12 +595,13 @@ header {
 }
 
 .ourFeature-content .ourFeature-boxs {
-    width: 18%;
-    height: 200px;
+    width: 30%;
+    height: 250px;
     border-top-right-radius: 50%;
     border-top-left-radius: 50%;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    margin-bottom: 5%;
     overflow: hidden;
     position: relative;
     filter: drop-shadow(0 0 5px var(--black));
@@ -611,7 +613,6 @@ header {
 
 .ourFeature-content .ourFeature-boxs:hover img {
     scale: 1.5;
-    transform: skew(15deg);
 }
 
 .ourFeature-content .ourFeature-boxs img {
@@ -629,8 +630,12 @@ header {
     top: 0;
     z-index: 1;
     left: 0;
-    background: rgb(0, 0, 0);
-    background: linear-gradient(353deg, rgba(0, 0, 0, 0.742734593837535) 17%, rgba(255, 255, 255, 0) 100%);
+    background: var(--black);
+    opacity: 0.3;
+}
+
+.ourFeature-content .ourFeature-boxs:hover .ourFeatures-overlay{
+    opacity: 0.8;
 }
 
 .ourFeature-content .ourFeature-boxs h5 {
@@ -640,6 +645,54 @@ header {
     z-index: 2;
     transform: translate(-50%, 0);
     color: var(--white);
+    padding: 2%;
+}
+
+.ourFeature-content .ourFeature-boxs h5::before{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border: 3px solid transparent;
+    border-radius: 10px !important;
+    top: 0;
+    left: 0;
+    
+}
+
+.ourFeature-content .ourFeature-boxs:hover h5{
+    bottom: 50%;
+    transform: translate(-50%,50%);
+}
+
+.ourFeature-content .ourFeature-boxs:hover h5:before{
+    width: 100%;
+    height: 100%;
+    border: 3px solid var(--gold);
+    border-top: none;
+    border-right: none;
+    transition: height 0.5s linear, width 0.5s linear 0.5s;
+}
+
+.ourFeature-content .ourFeature-boxs h5::after{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border: 3px solid transparent;
+    border-radius: 10px !important;
+    bottom: 0;
+    right: 0;
+    
+}
+
+.ourFeature-content .ourFeature-boxs:hover h5::after{
+    width: 100%;
+    border: 3px solid var(--gold);
+    height: 100%;
+    border-bottom: none;
+    border-left: none;
+    transition: height 0.5s linear, width 0.5s linear 0.5s;
 }
 
 /*//////////////////// whyChooseUs-section //////////////////// */
@@ -678,6 +731,104 @@ header {
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 1%;
+    overflow: hidden;
+}
+
+.whyChoose-content-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.why-circle-1 {
+    width: 50px;
+    height: 50px;
+    background-color: orange;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%);
+    z-index: 0;
+    animation: sca 8s linear infinite;
+    opacity: 0.5;
+}
+
+.why-circle-2 {
+    width: 50px;
+    height: 50px;
+    background-color: var(--white);
+    border-radius: 50%;
+    position: absolute;
+    animation: sca 8s linear infinite;
+    animation-delay: 2s;
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%);
+    z-index: 1;
+    opacity: 0.5;
+}
+
+.why-circle-3 {
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    border-radius: 50%;
+    animation: sca 8s linear infinite;
+    position: absolute;
+    animation-delay: 4s;
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%);
+    z-index: 2;
+    opacity: 0.5;
+}
+
+.why-circle-4 {
+    width: 50px;
+    height: 50px;
+    background-color: var(--red);
+    border-radius: 50%;
+    animation: sca 8s linear infinite;
+    position: absolute;
+    animation-delay: 6s;
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%);
+    z-index: 3;
+    opacity: 0.5;
+}
+
+@keyframes sca {
+    0% {
+        right: 0;
+        top: 50%;
+    }
+
+    25% {
+        right: 50%;
+        top: 0%;
+        transform: translate(50%, 0%);
+    }
+
+    50% {
+        right: 100%;
+        top: 50%;
+        transform: translate(50%, -50%);
+
+    }
+
+    75% {
+        right: 50%;
+        top: 100%;
+        transform: translate(-50%, -50%);
+
+    }
+
+    0% {
+        right: 0;
+        top: 50%;
+    }
 }
 
 .whyChooseUs-content .whyChooseUs-ti {
@@ -688,20 +839,26 @@ header {
 }
 
 .whyChooseUs-content h2 {
+    position: relative;
+    z-index: 6;
     color: var(--white);
 }
 
 .whyChooseUs-content p {
     text-align: justify;
+    position: relative;
+    z-index: 6;
     color: var(--white);
     font-size: 17px;
 }
 
-.whyChooseUs-content p span{
-   color: var(--white);
-   -webkit-text-stroke: 1px var(--red);
+.whyChooseUs-content p span {
+    color: var(--white);
+    -webkit-text-stroke: 1px var(--red);
     font-weight: 800;
-    font-size: 20px ;
+    position: relative;
+    z-index: 6;
+    font-size: 20px;
 }
 
 /* ----------------- marquee section ----------------------------- */
@@ -1359,6 +1516,16 @@ li::marker {
 
 @media screen and (max-width:600px) {
 
+    .navbar .navbar-brand {
+        width: 20%;
+    }
+
+    .header-content{
+        width: 100%;
+        left: 50%;
+z-index: 5;
+    }
+
     .weSpecialise-content {
         width: 100%;
         height: auto;
@@ -1628,14 +1795,7 @@ li::marker {
         position: relative;
         left: 0;
         bottom: 0;
-        border-top-right-radius: 30px;
-        /* From https://css.glass */
-        background: rgba(255, 255, 255, 0.2);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        padding: 1%;
+
     }
 
 
@@ -1812,15 +1972,7 @@ li::marker {
         position: relative;
         left: 0;
         bottom: 0;
-        border-top-right-radius: 30px;
-        /* From https://css.glass */
-        background: rgba(255, 255, 255, 0.2);
 
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        padding: 1%;
     }
 
     /* ////////////////////////////// Milestone section /////////////// */
@@ -1964,15 +2116,7 @@ li::marker {
         position: relative;
         left: 0;
         bottom: 0;
-        border-top-right-radius: 30px;
-        /* From https://css.glass */
-        background: rgba(255, 255, 255, 0.2);
 
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        padding: 1%;
     }
 
     /* ////////////////////////////// Milestone section /////////////// */
@@ -2116,15 +2260,7 @@ li::marker {
         position: relative;
         left: 0;
         bottom: 0;
-        border-top-right-radius: 30px;
-        /* From https://css.glass */
-        background: rgba(255, 255, 255, 0.2);
 
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        padding: 1%;
     }
 
 

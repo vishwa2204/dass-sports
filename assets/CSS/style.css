@@ -634,7 +634,7 @@ header {
     opacity: 0.3;
 }
 
-.ourFeature-content .ourFeature-boxs:hover .ourFeatures-overlay{
+.ourFeature-content .ourFeature-boxs:hover .ourFeatures-overlay {
     opacity: 0.8;
 }
 
@@ -648,7 +648,7 @@ header {
     padding: 2%;
 }
 
-.ourFeature-content .ourFeature-boxs h5::before{
+.ourFeature-content .ourFeature-boxs h5::before {
     position: absolute;
     content: '';
     width: 0;
@@ -657,15 +657,15 @@ header {
     border-radius: 10px !important;
     top: 0;
     left: 0;
-    
+
 }
 
-.ourFeature-content .ourFeature-boxs:hover h5{
+.ourFeature-content .ourFeature-boxs:hover h5 {
     bottom: 50%;
-    transform: translate(-50%,50%);
+    transform: translate(-50%, 50%);
 }
 
-.ourFeature-content .ourFeature-boxs:hover h5:before{
+.ourFeature-content .ourFeature-boxs:hover h5:before {
     width: 100%;
     height: 100%;
     border: 3px solid var(--gold);
@@ -674,7 +674,7 @@ header {
     transition: height 0.5s linear, width 0.5s linear 0.5s;
 }
 
-.ourFeature-content .ourFeature-boxs h5::after{
+.ourFeature-content .ourFeature-boxs h5::after {
     position: absolute;
     content: '';
     width: 0;
@@ -683,10 +683,10 @@ header {
     border-radius: 10px !important;
     bottom: 0;
     right: 0;
-    
+
 }
 
-.ourFeature-content .ourFeature-boxs:hover h5::after{
+.ourFeature-content .ourFeature-boxs:hover h5::after {
     width: 100%;
     border: 3px solid var(--gold);
     height: 100%;
@@ -1520,10 +1520,10 @@ li::marker {
         width: 20%;
     }
 
-    .header-content{
+    .header-content {
         width: 100%;
         left: 50%;
-z-index: 5;
+        z-index: 5;
     }
 
     .weSpecialise-content {
@@ -1875,10 +1875,8 @@ z-index: 5;
         top: 0;
         transform: translate(-0%, 0);
         background-color: var(--white) !important;
-        padding: 1% !important;
-        text-align: center !important;
-        border-bottom-left-radius: 50px !important;
-        border-bottom-right-radius: 50px !important;
+        padding: 6% !important;
+        text-align: justify !important;
         filter: drop-shadow(0 0 10px var(--white));
     }
 
@@ -2030,9 +2028,6 @@ z-index: 5;
         transform: translate(-0%, 0);
         background-color: var(--white) !important;
         padding: 1% !important;
-        text-align: center !important;
-        border-bottom-left-radius: 50px !important;
-        border-bottom-right-radius: 50px !important;
         filter: drop-shadow(0 0 10px var(--white));
     }
 
